@@ -2,7 +2,7 @@
 {% block body %}
         <h1> Add Tasks</h1>
        <form action="{% url 'Tasks:add' %}" method="post">
-      
+        {% csrf_token %}
         <input type="text" name="task" placeholder="Enter task">
         <input type="submit" value="Add Task">
          </form>
